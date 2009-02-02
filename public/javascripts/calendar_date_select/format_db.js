@@ -5,7 +5,7 @@ Date.prototype.getAMPMHour = function() { hour=Date.padded2(this.getHours()); re
 Date.prototype.getAMPM = function() { return (this.getHours() < 12) ? "" : ""; }
 
 Date.prototype.toFormattedString = function(include_time){
-  str = this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + Date.padded2(this.getDate());
+  str = this.getFullYear() + "-" + Date.padded2((this.getMonth() + 1)) + "-" + Date.padded2(this.getDate());
   if (include_time) { hour=this.getHours(); str += " " + this.getAMPMHour() + ":" + this.getPaddedMinutes() }
   return str;
 }
